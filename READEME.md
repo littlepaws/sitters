@@ -189,6 +189,147 @@ DELETE
 http://localhost:8080/stays?id={id}
 ```
 
+
+### Sitters Queries
+
+#### Example
+GET
+Request:
+```
+http://localhost:8080/sitters?page=0&minrating=5
+```
+
+Response:
+```
+{
+	"content": [
+	  {
+		"id": 950,
+		"name": "Caroline J.",
+		"email": "user6094@gmail.com",
+		"phone": "+16222742157",
+		"imageUrl": "http://placekitten.com/g/500/500?user=275",
+		"score": 1.73,
+		"avgRating": 5,
+		"rank": 2.06
+		},
+	  {
+		"id": 644,
+		"name": "Mackenzie S.",
+		"email": "user4917@t-mobile.com",
+		"phone": "+12800700943",
+		"imageUrl": "http://placekitten.com/g/500/500?user=166",
+		"score": 1.73,
+		"avgRating": 5,
+		"rank": 2.06
+		},
+	  {
+		"id": 603,
+		"name": "Alejandro G.",
+		"email": "user9414@gmail.com",
+		"phone": "+11902228094",
+		"imageUrl": "http://placekitten.com/g/500/500?user=54",
+		"score": 1.73,
+		"avgRating": 5,
+		"rank": 2.06
+		},
+	  {
+		"id": 706,
+		"name": "Christa Z.",
+		"email": "user7861@yahoo.com",
+		"phone": "+12171301949",
+		"imageUrl": "http://placekitten.com/g/500/500?user=254",
+		"score": 1.54,
+		"avgRating": 5,
+		"rank": 1.89
+		},
+	  {
+		"id": 620,
+		"name": "Kathryn S.",
+		"email": "user4691@hotmail.com",
+		"phone": "+12123547633",
+		"imageUrl": "http://placekitten.com/g/500/500?user=293",
+		"score": 1.54,
+		"avgRating": 5,
+		"rank": 1.89
+		},
+	  {
+		"id": 554,
+		"name": "Kathryn S.",
+		"email": "user4691@hotmail.com",
+		"phone": "+12123547633",
+		"imageUrl": "http://placekitten.com/g/500/500?user=293",
+		"score": 1.54,
+		"avgRating": 5,
+		"rank": 1.89
+		},
+	  {
+		"id": 586,
+		"name": "Lindsay H.",
+		"email": "user5322@t-mobile.com",
+		"phone": "+13251142183",
+		"imageUrl": "http://placekitten.com/g/500/500?user=217",
+		"score": 1.54,
+		"avgRating": 5,
+		"rank": 1.89
+		},
+	  {
+		"id": 974,
+		"name": "Jennifer W.",
+		"email": "user7759@hotmail.com",
+		"phone": "+12835279898",
+		"imageUrl": "http://placekitten.com/g/500/500?user=310",
+		"score": 1.35,
+		"avgRating": 5,
+		"rank": 1.72
+		},
+	  {
+		"id": 814,
+		"name": "Ashley K.",
+		"email": "user6178@hotmail.com",
+		"phone": "+16126040040",
+		"imageUrl": "http://placekitten.com/g/500/500?user=219",
+		"score": 1.35,
+		"avgRating": 5,
+		"rank": 1.72
+		},
+	  {
+		"id": 622,
+		"name": "Chasen T.",
+		"email": "user6379@t-mobile.com",
+		"phone": "+19641764575",
+		"imageUrl": "http://placekitten.com/g/500/500?user=237",
+		"score": 1.35,
+		"avgRating": 5,
+		"rank": 1.72
+		}
+	],
+	"pageable": {
+		"sort": {
+			"sorted": true,
+			"unsorted": false
+		},
+		"offset": 0,
+		"pageNumber": 0,
+		"pageSize": 10,
+		"unpaged": false,
+		"paged": true
+	},
+	"last": false,
+	"totalElements": 99,
+	"totalPages": 10,
+	"size": 10,
+	"number": 0,
+	"sort": {
+		"sorted": true,
+		"unsorted": false
+	},
+	"numberOfElements": 10,
+	"first": true
+}
+```
+
+
 ## Running the tests
 
 ### Unit Tests
