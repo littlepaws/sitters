@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="error">
+  <Appenders>
+    <!-- Console Appender -->
+    <Console name="console" target="SYSTEM_OUT">
+      <PatternLayout pattern="[%-5level] %d{yyyy-MMM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n" />
+    </Console>
+    
+    <!-- Rolling File Appender -->
+    <RollingFile name="rolling-file" 
+    			 fileName="logs/woof-application.log"
+    			 filePattern="logs/woof-application.log.%d{yyyy-MM-dd-hh-mm}.gz"
+    			 immediateFlush="true">
+      <PatternLayout pattern="[%-5level] %d{yyyy-MMM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n" />
+      <Policies>
+      	<SizeBasedTriggeringPolicy size="10 MB" />
+      </Policies>
+      <DefaultRolloverStrategy max="10" />
+    </RollingFile>  
+  </Appenders>
+
+  <Loggers>
+    <Root level="info">
+      <AppenderRef ref="console" />
+      <AppenderRef ref="rolling-file" />
+    </Root>
+       
+    <!-- Log from Spring  -->
+    <Logger name="org.springframework.boot" level="info" additivity="false">
+      <AppenderRef ref="console" />
+      <AppenderRef ref="rolling-file" />
+    </Logger>
+    
+    <!-- Log from application -->
+    <Logger name="com.exerise.rover" level="info" additivity="false">
+      <AppenderRef ref="console" />
+      <AppenderRef ref="rolling-file" />
+    </Logger>
+  </Loggers>
+</Configuration>

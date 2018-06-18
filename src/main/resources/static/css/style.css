@@ -1,0 +1,55 @@
+body {
+	font-family: 'Delius Swash Caps', cursive;
+	font-size: 1.2em;
+	background-color: #f7f2d1;
+}
+
+.rating-filter-description {
+	background-color: #fcda79;
+	padding: 2em;
+}
+
+#rating-filter {
+	margin: 1em 0em 0em 0em;
+	background-color:#d1ef9a;
+}
+
+.rating-bar {
+	list-style-type: none;
+}
+
+.rating-star {
+	display: inline-block;
+	transition: transform 1s;
+}
+
+.rating-star:hover {
+	transform: rotateZ(360deg);
+}
+
+#query-result {
+	margin-top: 1em;
+}
+
+#pagination-bar {
+	margin-top: 1em;
+}
+
+.pagination > li > a:focus,
+.pagination > li > a:hover,
+.pagination > li > span:focus,
+.pagination > li > span:hover {
+    z-index: 3;
+    color:#eceadf;
+    background-color:#eee9d6;
+    border-color: #EEEEEE;
+}
+
+.sitter-rating-star {
+	display: inline-block;
+}
+
+.card-image-top {
+	width:auto;
+	height:195px;
+}
